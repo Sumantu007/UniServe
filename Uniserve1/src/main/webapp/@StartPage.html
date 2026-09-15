@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to UniServe.com</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(135deg,
+                #0f172a,
+                #1d4ed8,
+                #2563eb,
+                #38bdf8);
+
+            overflow: hidden;
+        }
+
+        /* Background circles */
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.10);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -100px;
+        }
+
+        .circle2 {
+            width: 250px;
+            height: 250px;
+            bottom: -80px;
+            right: -80px;
+            animation-delay: 2s;
+        }
+
+        .circle3 {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+
+        /* Main box */
+
+        .welcome-box {
+
+            position: relative;
+            z-index: 2;
+
+            width: 90%;
+            max-width: 750px;
+
+            padding: 65px 40px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            border-radius: 30px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.25);
+
+            color: white;
+
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Logo */
+
+        .logo {
+
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .logo span {
+            color: #67e8f9;
+        }
+
+        /* Welcome text */
+
+        .welcome {
+
+            font-size: 20px;
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+
+            color: #dbeafe;
+        }
+
+        h1 {
+
+            font-size: 58px;
+
+            margin-bottom: 20px;
+
+            font-weight: 800;
+        }
+
+        h1 span {
+            color: #67e8f9;
+        }
+
+        .description {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #e0f2fe;
+
+            margin-bottom: 35px;
+        }
+
+        /* Button */
+
+        .start-btn {
+
+            display: inline-block;
+
+            padding: 15px 40px;
+
+            border-radius: 50px;
+
+            background: white;
+
+            color: #1d4ed8;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+        }
+
+        .start-btn:hover {
+
+            transform: translateY(-5px) scale(1.03);
+
+            background: #67e8f9;
+
+            color: #0f172a;
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.30);
+        }
+
+        /* Services */
+
+        .services {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .service {
+
+            padding: 10px 17px;
+
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.12);
+
+            border: 1px solid rgba(255,255,255,0.20);
+
+            font-size: 14px;
+
+            color: white;
+        }
+
+        /* Footer */
+
+        .footer {
+
+            margin-top: 35px;
+
+            font-size: 13px;
+
+            color: #dbeafe;
+        }
+
+        /* Mobile */
+
+        @media(max-width:600px) {
+
+            .welcome-box {
+                padding: 45px 20px;
+            }
+
+            .logo {
+                font-size: 35px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Background shapes -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+
+    <!-- Welcome Section -->
+
+    <div class="welcome-box">
+
+        <div class="logo">
+            <span></span>
+        </div>
+
+        <div class="welcome">
+            Welcome to
+        </div>
+
+        <h1>
+            <span>UniServe</span>
+        </h1>
+
+        <p class="description">
+            One platform for your everyday needs.
+            Food, payments, rides, hotels, travel,
+            entertainment and many more services —
+            all connected through UniServe.
+        </p>
+
+
+        <!-- Link to index.html -->
+
+        <a href="index.jsp" class="start-btn">
+            🚀 Get Started
+        </a>
+
+
+        <!-- Services -->
+
+        <div class="services">
+
+            <div class="service">🍔 Food</div>
+
+            <div class="service">💳 Payment</div>
+
+            <div class="service">🚕 Ride</div>
+
+            <div class="service">🏨 Hotel</div>
+
+            <div class="service">🎬 Movies</div>
+
+            <div class="service">🚆 Travel</div>
+
+            <div class="service">🤖 UniAI</div>
+
+        </div>
+
+
+        <div class="footer">
+
+            © 2026 UniServe | Your Services. One Platform.
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
