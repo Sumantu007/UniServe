@@ -19,7 +19,6 @@
 %>
 
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -44,19 +43,53 @@
         .navbar .logo {
             display: flex;
             align-items: center;
-
             text-decoration: none;
-
             height: 55px;
         }
 
         .navbar .logo img {
             width: 90px;
             height: 90px;
-
             object-fit: contain;
-
             display: block;
+        }
+
+
+        /* =========================
+           GOOGLE LINK
+           ========================= */
+
+        .google-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            margin-left: 15px;
+
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            background: #f5f5f5;
+
+            transition: 0.3s;
+        }
+
+        .google-link:hover {
+            background: #e8f0fe;
+            color: #1a73e8;
+        }
+
+        .google-icon {
+            font-size: 18px;
         }
 
 
@@ -73,7 +106,9 @@
 
         .profile-button {
             border: none;
+
             background: white;
+
             color: #222;
 
             padding: 10px 16px;
@@ -83,10 +118,13 @@
             cursor: pointer;
 
             font-size: 15px;
+
             font-weight: 600;
 
             display: flex;
+
             align-items: center;
+
             gap: 7px;
         }
 
@@ -106,6 +144,7 @@
             position: absolute;
 
             right: 0;
+
             top: 52px;
 
             width: 240px;
@@ -206,6 +245,15 @@
                 height: 48px;
             }
 
+            .google-link {
+                margin-left: 5px;
+                padding: 7px 10px;
+                font-size: 13px;
+            }
+
+            .google-icon {
+                font-size: 16px;
+            }
         }
 
     </style>
@@ -223,7 +271,9 @@
 <header class="navbar">
 
 
-    <!-- UNISERVE LOGO -->
+    <!-- =========================
+         UNISERVE LOGO
+         ========================= -->
 
     <a href="index.jsp"
        class="logo"
@@ -235,7 +285,26 @@
     </a>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         GOOGLE LINK
+         ========================= -->
+
+    <a href="https://www.google.com"
+       class="google-link"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Open Google">
+
+        <span class="google-icon">🔍</span>
+
+        Google
+
+    </a>
+
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
 
     <nav>
 
@@ -245,6 +314,7 @@
 
 
         <% if (!loggedIn) { %>
+
 
             <!-- =====================
                  NOT LOGGED IN
@@ -265,12 +335,15 @@
 
         <% } else { %>
 
+
             <!-- =====================
                  LOGGED IN
                  ===================== -->
 
             <div class="profile-area">
 
+
+                <!-- PROFILE BUTTON -->
 
                 <button
                     type="button"
@@ -286,7 +359,9 @@
                 </button>
 
 
-                <!-- PROFILE DROPDOWN -->
+                <!-- =====================
+                     PROFILE DROPDOWN
+                     ===================== -->
 
                 <div
                     id="profileMenu"
@@ -334,9 +409,12 @@
 
             </div>
 
+
         <% } %>
 
+
     </nav>
+
 
 </header>
 
@@ -366,7 +444,9 @@
             Your Everyday Services,
 
             <span>
+
                 All In One Place.
+
             </span>
 
         </h1>
@@ -421,6 +501,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -433,14 +514,18 @@
 
 
         <h3>
+
             DASHBOARD
+
         </h3>
 
 
         <div class="service-grid">
 
 
-            <!-- FOOD -->
+            <!-- =====================
+                 FOOD
+                 ===================== -->
 
             <a href="food.jsp"
                class="service-card">
@@ -459,7 +544,9 @@
 
 
 
-            <!-- GROCERY -->
+            <!-- =====================
+                 GROCERY
+                 ===================== -->
 
             <a href="general-stores.jsp"
                class="service-card">
@@ -478,7 +565,9 @@
 
 
 
-            <!-- PAYMENT -->
+            <!-- =====================
+                 PAYMENT
+                 ===================== -->
 
             <a href="payment.jsp"
                class="service-card">
@@ -497,7 +586,9 @@
 
 
 
-            <!-- RIDE -->
+            <!-- =====================
+                 RIDE
+                 ===================== -->
 
             <a href="ride.jsp"
                class="service-card">
@@ -516,7 +607,9 @@
 
 
 
-            <!-- HOTEL -->
+            <!-- =====================
+                 HOTEL
+                 ===================== -->
 
             <a href="hotel.jsp"
                class="service-card">
@@ -535,7 +628,9 @@
 
 
 
-            <!-- UNIAI -->
+            <!-- =====================
+                 UNIAI
+                 ===================== -->
 
             <a href="uniAi.jsp"
                class="service-card">
@@ -554,7 +649,9 @@
 
 
 
-            <!-- ACTIVITY -->
+            <!-- =====================
+                 ACTIVITY
+                 ===================== -->
 
             <a href="Activity.jsp"
                class="service-card">
@@ -573,7 +670,9 @@
 
 
 
-            <!-- MORE SERVICES -->
+            <!-- =====================
+                 MORE SERVICES
+                 ===================== -->
 
             <a href="more-services.jsp"
                class="service-card more-card">
@@ -594,6 +693,7 @@
         </div>
 
     </div>
+
 
 </section>
 
@@ -616,7 +716,6 @@
      ========================= -->
 
 <script>
-
 
 function toggleProfile() {
 
@@ -645,7 +744,6 @@ function toggleProfile() {
 document.addEventListener(
     "click",
     function(event) {
-
 
         const profileArea =
             document.querySelector(
@@ -685,3 +783,4 @@ document.addEventListener(
 </body>
 
 </html>
+```
